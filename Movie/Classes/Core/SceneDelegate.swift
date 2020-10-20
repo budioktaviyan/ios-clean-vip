@@ -9,6 +9,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let controller = Injector.shared.resolve(HomeViewController.self)!
         let navigation = UINavigationController(rootViewController: controller)
+        navigation.navigationBar.barTintColor = .white
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.rootViewController = navigation

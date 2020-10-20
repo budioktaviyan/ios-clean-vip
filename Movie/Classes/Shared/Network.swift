@@ -4,15 +4,13 @@ import RxSwift
 
 final class Network<T: Codable> {
 
-    private let endPoint: String
     private let encoding: URLEncoding
     private let scheduler: ConcurrentDispatchQueueScheduler
 
-    required init(with endPoint: String) {
+    required init() {
         let dispatchQoS = DispatchQoS.QoSClass.background
         let qos = DispatchQoS(qosClass: dispatchQoS, relativePriority: 1)
 
-        self.endPoint = endPoint
         self.encoding = URLEncoding()
         self.scheduler = ConcurrentDispatchQueueScheduler(qos: qos)
     }

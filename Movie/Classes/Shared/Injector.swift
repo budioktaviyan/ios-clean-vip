@@ -7,7 +7,9 @@ final class Injector {
     private static func resolved() -> Resolver {
         let assembler = Assembler()
         assembler.apply(assemblies: [
-            HomeConfigurator()
+            HomeConfigurator(),
+            NowPlayingConfigurator(),
+            ComingSoonConfigurator()
         ])
 
         return assembler.resolver

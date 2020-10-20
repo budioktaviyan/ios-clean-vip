@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Movie" customModuleProvider="target">
             <connections>
+                <outlet property="buttonBarView" destination="7Bm-3e-CIh" id="Ter-iI-8oW"/>
+                <outlet property="containerView" destination="j2B-IQ-kBK" id="YUX-Te-qPP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,9 +20,36 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7Bm-3e-CIh" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                    <rect key="frame" x="0.0" y="44" width="414" height="64"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="mQx-8m-ztz"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9lU-J7-WmZ">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2B-IQ-kBK">
+                    <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                </scrollView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="123" y="130"/>
+            <constraints>
+                <constraint firstItem="7Bm-3e-CIh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0xg-sF-Hks"/>
+                <constraint firstItem="j2B-IQ-kBK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TWc-RL-2ES"/>
+                <constraint firstItem="j2B-IQ-kBK" firstAttribute="top" secondItem="7Bm-3e-CIh" secondAttribute="bottom" id="aAT-MT-57H"/>
+                <constraint firstAttribute="bottom" secondItem="j2B-IQ-kBK" secondAttribute="bottom" id="nJ1-Hp-iua"/>
+                <constraint firstItem="7Bm-3e-CIh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pfb-6Y-HQc"/>
+                <constraint firstItem="7Bm-3e-CIh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sTJ-GW-u9u"/>
+                <constraint firstItem="j2B-IQ-kBK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="t9B-Yo-udi"/>
+            </constraints>
+            <point key="canvasLocation" x="121.73913043478262" y="129.91071428571428"/>
         </view>
     </objects>
     <resources>

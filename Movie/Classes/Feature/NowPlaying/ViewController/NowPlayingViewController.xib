@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NowPlayingViewController" customModule="Movie" customModuleProvider="target">
+            <connections>
+                <outlet property="npLoading" destination="z54-S9-umz" id="rdn-Xf-M1f"/>
+                <outlet property="npTable" destination="sPc-V6-Zgx" id="1Vr-ej-EoT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sPc-V6-Zgx" userLabel="NowPlaying">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="z54-S9-umz" userLabel="Loading">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="z54-S9-umz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="LCb-Tf-FbT"/>
+                <constraint firstItem="sPc-V6-Zgx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="T1Y-jT-VTC"/>
+                <constraint firstItem="z54-S9-umz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Znv-lr-HxW"/>
+                <constraint firstAttribute="bottom" secondItem="sPc-V6-Zgx" secondAttribute="bottom" id="g37-QN-u3w"/>
+                <constraint firstItem="sPc-V6-Zgx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yR8-ck-vgV"/>
+                <constraint firstItem="sPc-V6-Zgx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yj5-Ih-0Mo"/>
+            </constraints>
+            <point key="canvasLocation" x="121.73913043478262" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
