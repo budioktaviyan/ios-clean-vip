@@ -4,7 +4,7 @@ final class NowPlayingConfigurator: Assembly {
 
     func assemble(container: Container) {
         container.register(Network<NowPlaying.Response>.self) {_ in
-            return Network<NowPlaying.Response>()
+            Network<NowPlaying.Response>()
         }
 
         container.register(NowPlayingWorkerProtocol.self) { (r) in

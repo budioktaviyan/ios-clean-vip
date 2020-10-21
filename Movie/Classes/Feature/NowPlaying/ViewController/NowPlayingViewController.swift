@@ -24,7 +24,7 @@ final class NowPlayingViewController: UIViewController {
 extension NowPlayingViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.data.count ?? 0
+        viewModel?.data.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -36,14 +36,14 @@ extension NowPlayingViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return NowPlayingViewCell.height
+        NowPlayingViewCell.height
     }
 }
 
 extension NowPlayingViewController: IndicatorInfoProvider {
 
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Now Playing")
+        IndicatorInfo(title: "Now Playing")
     }
 }
 

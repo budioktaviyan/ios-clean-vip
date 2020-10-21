@@ -1,4 +1,4 @@
-struct NowPlaying {
+struct ComingSoon {
 
     struct Request {
 

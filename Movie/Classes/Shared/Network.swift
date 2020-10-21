@@ -16,6 +16,6 @@ final class Network<T: Codable> {
     }
 
     func get(_ path: URL, _ params: [String: Any]) -> Single<T> {
-        return RxAlamofire.data(.get, path, parameters: params, encoding: encoding).asSingle().observeOn(scheduler).map(T.self)
+        RxAlamofire.data(.get, path, parameters: params, encoding: encoding).asSingle().observeOn(scheduler).map(T.self)
     }
 }

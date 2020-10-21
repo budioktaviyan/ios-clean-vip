@@ -1,16 +1,16 @@
 import Foundation
 
-protocol NowPlayingPresenterOutput: AnyObject {
+protocol ComingSoonPresenterOutput: AnyObject {
 
     func showLoading()
     func hideLoading()
-    func success(with viewModel: NowPlaying.ViewModel)
+    func success(with viewModel: ComingSoon.ViewModel)
     func error(with message: String)
 }
 
-final class NowPlayingPresenter: NowPlayingInteractorOutput {
+final class ComingSoonPresenter: ComingSoonInteractorOutput {
 
-    var output: NowPlayingPresenterOutput!
+    var output: ComingSoonPresenterOutput!
 
     func showLoading() {
         output.showLoading()
@@ -20,10 +20,10 @@ final class NowPlayingPresenter: NowPlayingInteractorOutput {
         output.hideLoading()
     }
 
-    func success(with response: NowPlaying.Response) {
+    func success(with response: ComingSoon.Response) {
         guard let data = response.results else { return }
 
-        let viewModel = NowPlaying.ViewModel(data: data.compactMap { result in
+        let viewModel = ComingSoon.ViewModel(data: data.compactMap { result in
             .init(
                 title: result.title ?? "-",
                 overview: result.overview ?? "-",

@@ -23,19 +23,16 @@
                             <constraint firstAttribute="width" constant="128" id="gWM-uj-suJ"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-NQ-Jss" userLabel="Title">
-                        <rect key="frame" x="160" y="16" width="188" height="54"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="54" id="s2i-fK-qt9"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-NQ-Jss" userLabel="Title">
+                        <rect key="frame" x="160" y="16" width="188" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-8B-rgh" userLabel="Overview">
-                        <rect key="frame" x="160" y="74" width="188" height="32"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxI-8B-rgh" userLabel="Overview">
+                        <rect key="frame" x="160" y="38" width="188" height="80"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="32" id="YnX-DQ-Sc4"/>
+                            <constraint firstAttribute="height" constant="80" id="huS-5F-ANV"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
