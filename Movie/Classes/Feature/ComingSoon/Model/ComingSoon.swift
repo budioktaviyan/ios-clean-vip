@@ -13,7 +13,7 @@ struct ComingSoon {
 
     struct Response: Codable {
 
-        let results: [Result]?
+        var results: [Result]?
 
         struct Result: Codable {
 
